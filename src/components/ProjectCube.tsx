@@ -7,12 +7,6 @@ const ProjectCube = () => {
 
   const projects = [
     {
-      title: "DoctorCubes",
-      description: "MBBS Admissions Platform",
-      tech: "Java • Firebase • REST APIs",
-      gradient: "from-blue-500 to-purple-600"
-    },
-    {
       title: "AI Quiz App",
       description: "ChatGPT & Gemini Integration",
       tech: "Android • AI APIs • NLP",
@@ -49,7 +43,7 @@ const ProjectCube = () => {
               index === currentFace ? 'rotate-y-0' : 'rotate-y-90'
             }`}
             style={{
-              transform: `rotateY(${index * 90}deg) translateZ(200px)`,
+              transform: `rotateY(${index * 120}deg) translateZ(200px)`,
               backfaceVisibility: 'hidden'
             }}
           >

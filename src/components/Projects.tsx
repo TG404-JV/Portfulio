@@ -101,7 +101,7 @@ const Projects = () => {
                     {project.githubUrl && (
                       <Button 
                         variant="outline"
-                        className="border-gray-600 text-gray-300 hover:bg-gray-700 flex-1"
+                        className="border-blue-400 text-blue-400 hover:bg-blue-400/10 flex-1"
                         onClick={() => window.open(project.githubUrl, '_blank')}
                       >
                         <Github size={16} className="mr-2" />
