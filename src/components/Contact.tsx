@@ -4,6 +4,24 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Github, Linkedin, Globe, Mail, MapPin, GraduationCap, Send, Star, Sparkles } from 'lucide-react';
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+
+// Firebase configuration (replace with your own config from Firebase Console)
+const firebaseConfig = {
+  apiKey: "AIzaSyB-b_S1nFGXGnIhIPBtJWppZKyDUK4mv8Q",
+  authDomain: "tvm-test-497b3.firebaseapp.com",
+  databaseURL: "https://tvm-test-497b3-default-rtdb.firebaseio.com",
+  projectId: "tvm-test-497b3",
+  storageBucket: "tvm-test-497b3.firebasestorage.app",
+  messagingSenderId: "776362205320",
+  appId: "1:776362205320:web:c7fd2f295c9a0a70a87f3d",
+  measurementId: "G-BCNYW6LZL9"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +31,7 @@ const Contact = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [submissionStatus, setSubmissionStatus] = useState(null); // For success/error messages
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -27,16 +46,29 @@ const Contact = () => {
     e.preventDefault();
     
     if (!formData.name || !formData.email || !formData.message) {
+      setSubmissionStatus({ type: 'error', message: 'Please fill out all fields.' });
       return;
     }
 
     setIsLoading(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setFormData({ name: '', email: '', message: '' });
-    setIsLoading(false);
+    try {
+      // Add form data to Firestore
+      await addDoc(collection(db, 'contacts'), {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        timestamp: new Date()
+      });
+      
+      setSubmissionStatus({ type: 'success', message: 'Message sent successfully!' });
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmissionStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -44,6 +76,8 @@ const Contact = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
+    // Clear submission status when user starts typing again
+    if (submissionStatus) setSubmissionStatus(null);
   };
 
   const FloatingParticle = ({ delay = 0, size = 4 }) => (
@@ -118,6 +152,17 @@ const Contact = () => {
                 </div>
                 
                 <div className="space-y-6">
+                  {/* Submission Status Message */}
+                  {submissionStatus && (
+                    <div className={`p-4 rounded-xl ${
+                      submissionStatus.type === 'success' 
+                        ? 'bg-green-500/10 border border-green-500/30 text-green-400' 
+                        : 'bg-red-500/10 border border-red-500/30 text-red-400'
+                    }`}>
+                      {submissionStatus.message}
+                    </div>
+                  )}
+
                   <div className="space-y-3">
                     <label htmlFor="name" className="text-sm font-semibold text-gray-300 flex items-center gap-2">
                       <Star className="w-3 h-3 text-blue-400" />
