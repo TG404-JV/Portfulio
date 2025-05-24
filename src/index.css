@@ -108,6 +108,15 @@
     animation: orbit 10s linear infinite;
   }
 
+  @keyframes orbit-skill {
+    0% { transform: rotateZ(0deg) translateX(120px) rotateZ(0deg); }
+    100% { transform: rotateZ(360deg) translateX(120px) rotateZ(-360deg); }
+  }
+
+  .orbit-skill {
+    animation: orbit-skill 12s linear infinite;
+  }
+
   .perspective-1000 {
     perspective: 1000px;
   }

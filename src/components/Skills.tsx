@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -42,6 +43,17 @@ const Skills = () => {
     }
   ];
 
+  const rotatingSkills = [
+    { name: "Java", color: "bg-orange-500" },
+    { name: "Android", color: "bg-green-500" },
+    { name: "Firebase", color: "bg-yellow-500" },
+    { name: "AI APIs", color: "bg-purple-500" },
+    { name: "MySQL", color: "bg-blue-500" },
+    { name: "Git", color: "bg-red-500" },
+    { name: "React", color: "bg-cyan-500" },
+    { name: "Python", color: "bg-emerald-500" }
+  ];
+
   return (
     <div className="container mx-auto px-4">
       <div className="max-w-6xl mx-auto">
@@ -49,30 +61,31 @@ const Skills = () => {
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Technical <span className="text-gradient">Skills</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             A comprehensive toolkit of technologies and frameworks that power my development journey.
           </p>
         </div>
 
         {/* Animated skills orbit with photo in center */}
         <div className="relative mb-16">
-          <div className="w-32 h-32 mx-auto bg-gradient-primary rounded-full flex items-center justify-center relative overflow-hidden border-4 border-blue-400/30">
+          <div className="w-40 h-40 mx-auto bg-gradient-primary rounded-full flex items-center justify-center relative overflow-hidden border-4 border-blue-400/50 shadow-2xl">
             <img 
               src="/lovable-uploads/7eded82c-0810-4710-b39e-e5a3ede4215d.png" 
               alt="Tejas Kale" 
               className="w-full h-full object-cover rounded-full"
             />
-            {/* Orbiting skill icons */}
-            {['☕', '🐍', '🔥', '🤖', '📱', '⚡'].map((icon, index) => (
+            
+            {/* Rotating skill badges */}
+            {rotatingSkills.map((skill, index) => (
               <div
                 key={index}
-                className="absolute w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-xl border-2 border-blue-400/30 orbit"
+                className={`absolute w-16 h-16 ${skill.color} rounded-full flex items-center justify-center text-white text-xs font-bold border-2 border-white shadow-lg orbit-skill`}
                 style={{
-                  animationDelay: `${index * -1.67}s`,
+                  animationDelay: `${index * -1.25}s`,
                   animationDuration: '10s'
                 }}
               >
-                {icon}
+                {skill.name}
               </div>
             ))}
           </div>
@@ -114,21 +127,28 @@ const Skills = () => {
 
         {/* Skill progression */}
         <div className="mt-16">
-          <Card className="p-8 bg-gray-800/50 border-gray-700">
-            <h3 className="text-2xl font-bold mb-6 text-gradient text-center">Continuous Learning Journey</h3>
+          <Card className="p-8 bg-gradient-to-br from-gray-800/80 to-gray-900/80 border-gray-600 shadow-2xl">
+            <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 via-purple-400 to-teal-400 bg-clip-text text-transparent">
+              Continuous Learning Journey
+            </h3>
             <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div className="space-y-2">
+              <div className="space-y-2 p-4 rounded-lg bg-blue-500/10 border border-blue-500/20">
                 <div className="text-3xl font-bold text-blue-400">3+</div>
-                <div className="text-gray-400">Years of Learning</div>
+                <div className="text-gray-200 font-medium">Years of Learning</div>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-2 p-4 rounded-lg bg-green-500/10 border border-green-500/20">
                 <div className="text-3xl font-bold text-green-400">10+</div>
-                <div className="text-gray-400">Projects Completed</div>
+                <div className="text-gray-200 font-medium">Projects Completed</div>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-2 p-4 rounded-lg bg-purple-500/10 border border-purple-500/20">
                 <div className="text-3xl font-bold text-purple-400">5</div>
-                <div className="text-gray-400">Certifications Earned</div>
+                <div className="text-gray-200 font-medium">Certifications Earned</div>
               </div>
+            </div>
+            <div className="mt-6 text-center">
+              <p className="text-lg font-semibold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                Ready to build the next big thing together! 🚀
+              </p>
             </div>
           </Card>
         </div>

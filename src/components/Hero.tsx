@@ -2,7 +2,6 @@
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import ProjectCube from '@/components/ProjectCube';
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -34,49 +33,41 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Text content */}
-          <div className="text-center lg:text-left">
-            <div className="inline-block mb-4">
-              <span className="text-sm font-medium bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full border border-blue-500/30">
-                👋 Hey there! Welcome to my portfolio
-              </span>
-            </div>
-            
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6">
-              <span className="text-gradient">Tejas Kale</span>
-            </h1>
-            
-            <div className="text-xl lg:text-2xl text-gray-300 mb-8 space-y-2">
-              <p>Android Developer</p>
-              <p className="text-lg text-blue-400">Crafting Innovative Apps with AI and Passion</p>
-            </div>
-
-            <p className="text-gray-400 mb-8 max-w-lg">
-              B.Tech CSE student specializing in Android development, AI integration, and user-centered design. 
-              Transforming ideas into impactful mobile experiences.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button 
-                onClick={scrollToAbout}
-                className="bg-gradient-primary hover:opacity-90 text-white px-8 py-3 text-lg"
-              >
-                Explore My Work
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-blue-400 text-blue-400 hover:bg-blue-400/10 px-8 py-3 text-lg"
-                onClick={() => window.open('https://www.linkedin.com/in/tejas-kale-65419a24b', '_blank')}
-              >
-                Connect on LinkedIn
-              </Button>
-            </div>
+        <div className="text-center max-w-4xl mx-auto">
+          <div className="inline-block mb-4">
+            <span className="text-sm font-medium bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full border border-blue-500/30">
+              👋 Hey there! Welcome to my portfolio
+            </span>
+          </div>
+          
+          <h1 className="text-5xl lg:text-7xl font-bold mb-6">
+            <span className="text-gradient">Tejas Kale</span>
+          </h1>
+          
+          <div className="text-xl lg:text-2xl text-gray-300 mb-8 space-y-2">
+            <p>Android Developer</p>
+            <p className="text-lg text-blue-400">Crafting Innovative Apps with AI and Passion</p>
           </div>
 
-          {/* Right side - 3D Project Cube */}
-          <div className="flex justify-center">
-            <ProjectCube />
+          <p className="text-gray-400 mb-8 max-w-2xl mx-auto text-lg">
+            B.Tech CSE student specializing in Android development, AI integration, and user-centered design. 
+            Transforming ideas into impactful mobile experiences.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              onClick={scrollToAbout}
+              className="bg-gradient-primary hover:opacity-90 text-white px-8 py-3 text-lg"
+            >
+              Explore My Work
+            </Button>
+            <Button 
+              variant="outline" 
+              className="border-blue-400 text-blue-400 hover:bg-blue-400/10 px-8 py-3 text-lg"
+              onClick={() => window.open('https://www.linkedin.com/in/tejas-kale-65419a24b', '_blank')}
+            >
+              Connect on LinkedIn
+            </Button>
           </div>
         </div>
 
