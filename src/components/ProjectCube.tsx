@@ -7,12 +7,6 @@ const ProjectCube = () => {
 
   const projects = [
     {
-      title: "AI Quiz App",
-      description: "ChatGPT & Gemini Integration",
-      tech: "Android • AI APIs • NLP",
-      gradient: "from-green-500 to-teal-600"
-    },
-    {
       title: "Car Rental",
       description: "Full-Stack Web Platform",
       tech: "PHP • MySQL • HTML5",
@@ -43,7 +37,7 @@ const ProjectCube = () => {
               index === currentFace ? 'rotate-y-0' : 'rotate-y-90'
             }`}
             style={{
-              transform: `rotateY(${index * 120}deg) translateZ(200px)`,
+              transform: `rotateY(${index * 180}deg) translateZ(200px)`,
               backfaceVisibility: 'hidden'
             }}
           >

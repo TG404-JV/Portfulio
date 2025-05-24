@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -55,10 +54,14 @@ const Skills = () => {
           </p>
         </div>
 
-        {/* Animated skills orbit */}
+        {/* Animated skills orbit with photo in center */}
         <div className="relative mb-16">
-          <div className="w-32 h-32 mx-auto bg-gradient-primary rounded-full flex items-center justify-center text-4xl font-bold text-white relative">
-            TK
+          <div className="w-32 h-32 mx-auto bg-gradient-primary rounded-full flex items-center justify-center relative overflow-hidden border-4 border-blue-400/30">
+            <img 
+              src="/lovable-uploads/7eded82c-0810-4710-b39e-e5a3ede4215d.png" 
+              alt="Tejas Kale" 
+              className="w-full h-full object-cover rounded-full"
+            />
             {/* Orbiting skill icons */}
             {['☕', '🐍', '🔥', '🤖', '📱', '⚡'].map((icon, index) => (
               <div
