@@ -256,7 +256,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes orbit {
           from {
             transform: translate(-50%, -50%) rotate(0deg) translateX(140px) rotate(0deg);

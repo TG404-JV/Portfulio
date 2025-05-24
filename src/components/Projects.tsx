@@ -296,7 +296,7 @@ const Projects = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
           50% { transform: translateY(-30px) rotate(180deg); opacity: 0.7; }

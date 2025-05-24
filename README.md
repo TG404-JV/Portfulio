@@ -1,73 +1,112 @@
-# Welcome to your Lovable project
+# Project Name
 
-## Project info
+A modern web application built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/cbf396a1-f442-41d8-a2c2-088081efe392
+## 🚀 Features
 
-## How can I edit this code?
+- Modern React application with TypeScript
+- Responsive design with Tailwind CSS
+- Component library with shadcn/ui
+- Fast development with Vite
+- Clean and maintainable code structure
 
-There are several ways of editing your application.
+## 🛠️ Technologies Used
 
-**Use Lovable**
+- **Frontend Framework**: React 18
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Build Tool**: Vite
+- **Package Manager**: npm
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/cbf396a1-f442-41d8-a2c2-088081efe392) and start prompting.
+## 📋 Prerequisites
 
-Changes made via Lovable will be committed automatically to this repo.
+Before you begin, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (version 16 or higher)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
 
-**Use your preferred IDE**
+You can install Node.js using [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) for better version management.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Follow these steps to get the project running locally:
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+### 1. Clone the repository
+```bash
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 2. Install dependencies
+```bash
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### 3. Start the development server
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📦 Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build the project for production
+- `npm run preview` - Preview the production build locally
+- `npm run lint` - Run ESLint to check code quality
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📁 Project Structure
 
-## What technologies are used for this project?
+```
+src/
+├── components/     # Reusable UI components
+├── pages/         # Page components
+├── hooks/         # Custom React hooks
+├── utils/         # Utility functions
+├── types/         # TypeScript type definitions
+└── styles/        # Global styles and Tailwind config
+```
 
-This project is built with:
+## 🚀 Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Using Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to [Vercel](https://vercel.com/)
+3. Deploy with one click
 
-## How can I deploy this project?
+### Using Netlify
+1. Build the project: `npm run build`
+2. Deploy the `dist` folder to [Netlify](https://netlify.com/)
 
-Simply open [Lovable](https://lovable.dev/projects/cbf396a1-f442-41d8-a2c2-088081efe392) and click on Share -> Publish.
+### Using GitHub Pages
+1. Install gh-pages: `npm install --save-dev gh-pages`
+2. Add deployment script to package.json
+3. Run: `npm run deploy`
 
-## Can I connect a custom domain to my Lovable project?
+## 🤝 Contributing
 
-Yes, you can!
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Commit your changes: `git commit -am 'Add new feature'`
+4. Push to the branch: `git push origin feature/new-feature`
+5. Submit a pull request
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📝 License
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Created By
+
+**Tejas Kale**
+
+- GitHub: [@tejaskale](https://github.com/tejaskale)
+- LinkedIn: [Tejas Kale](https://linkedin.com/in/tejaskale)
+
+## 📞 Support
+
+If you have any questions or need help, please open an issue or contact the maintainer.
+
+---
+
+⭐ If you found this project helpful, please give it a star!
