@@ -67,22 +67,29 @@ const Skills = () => {
         </div>
 
         {/* Animated skills orbit with photo in center */}
-        <div className="relative mb-16">
-          <div className="w-40 h-40 mx-auto bg-gradient-primary rounded-full flex items-center justify-center relative overflow-hidden border-4 border-blue-400/50 shadow-2xl">
-            <img 
-              src="/lovable-uploads/7eded82c-0810-4710-b39e-e5a3ede4215d.png" 
-              alt="Tejas Kale" 
-              className="w-full h-full object-cover rounded-full"
-            />
+        <div className="relative mb-16 flex justify-center">
+          <div className="relative w-80 h-80">
+            {/* Center photo */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-primary rounded-full flex items-center justify-center overflow-hidden border-4 border-blue-400/50 shadow-2xl">
+              <img 
+                src="/lovable-uploads/7eded82c-0810-4710-b39e-e5a3ede4215d.png" 
+                alt="Tejas Kale" 
+                className="w-full h-full object-cover rounded-full"
+              />
+            </div>
             
             {/* Rotating skill badges */}
             {rotatingSkills.map((skill, index) => (
               <div
                 key={index}
-                className={`absolute w-16 h-16 ${skill.color} rounded-full flex items-center justify-center text-white text-xs font-bold border-2 border-white shadow-lg orbit-skill`}
+                className={`absolute w-16 h-16 ${skill.color} rounded-full flex items-center justify-center text-white text-xs font-bold border-2 border-white shadow-lg`}
                 style={{
-                  animationDelay: `${index * -1.25}s`,
-                  animationDuration: '10s'
+                  top: '50%',
+                  left: '50%',
+                  transformOrigin: '0 0',
+                  animation: `orbit 15s linear infinite`,
+                  animationDelay: `${index * -1.875}s`,
+                  transform: `translate(-50%, -50%) rotate(${index * 45}deg) translateX(120px) rotate(${-index * 45}deg)`
                 }}
               >
                 {skill.name}
@@ -146,7 +153,7 @@ const Skills = () => {
               </div>
             </div>
             <div className="mt-6 text-center">
-              <p className="text-lg font-semibold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+              <p className="text-lg font-semibold bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Ready to build the next big thing together! 🚀
               </p>
             </div>

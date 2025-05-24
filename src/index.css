@@ -100,12 +100,12 @@
   }
 
   @keyframes orbit {
-    0% { transform: rotateZ(0deg) translateX(100px) rotateZ(0deg); }
-    100% { transform: rotateZ(360deg) translateX(100px) rotateZ(-360deg); }
-  }
-
-  .orbit {
-    animation: orbit 10s linear infinite;
+    0% { 
+      transform: translate(-50%, -50%) rotate(0deg) translateX(120px) rotate(0deg); 
+    }
+    100% { 
+      transform: translate(-50%, -50%) rotate(360deg) translateX(120px) rotate(-360deg); 
+    }
   }
 
   @keyframes orbit-skill {
