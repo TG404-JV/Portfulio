@@ -291,12 +291,20 @@ const About = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
                 </Button>
                 
-                <Button 
-                  className="group relative border-2 border-white/30 text-white hover:text-black hover:bg-white flex-1 py-4 text-lg font-semibold rounded-2xl backdrop-blur-xl bg-white/5 hover:bg-white transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/20"
-                >
-                  <Download size={18} className="mr-2 group-hover:animate-bounce" />
-                  Download Resume
-                </Button>
+                <a
+  href="/pdf/resume.pdf"
+  download="Tejas-Kale-Resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button 
+    className="group relative border-2 border-white/30 text-white hover:text-black hover:bg-white flex-1 py-4 text-lg font-semibold rounded-2xl backdrop-blur-xl bg-white/5 hover:bg-white transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/20"
+  >
+    <Download size={18} className="mr-2 group-hover:animate-bounce" />
+    Download Resume
+  </Button>
+</a>
+
               </div>
             </div>
           </div>
