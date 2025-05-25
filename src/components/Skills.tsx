@@ -137,7 +137,7 @@ const Skills = () => {
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-full flex items-center justify-center overflow-hidden border-4 border-white/20 shadow-2xl backdrop-blur-xl">
                 <div className="w-36 h-36 rounded-full overflow-hidden border-2 border-white/30">
                   <img 
-                    src="/lovable-uploads/7eded82c-0810-4710-b39e-e5a3ede4215d.png" 
+                      src="/img/profile.png" 
                     alt="Tejas Kale" 
                     className="w-full h-full object-cover"
                   />

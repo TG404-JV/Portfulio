@@ -131,7 +131,7 @@ const About = () => {
                   {/* Photo */}
                   <div className="absolute inset-2 rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-blue-500/25">
                     <img 
-                      src="/lovable-uploads/7eded82c-0810-4710-b39e-e5a3ede4215d.png" 
+                      src="/img/profile.png" 
                       alt="Tejas Kale - Android Developer" 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -304,6 +304,7 @@ const About = () => {
     Download Resume
   </Button>
 </a>
+
 
               </div>
             </div>
