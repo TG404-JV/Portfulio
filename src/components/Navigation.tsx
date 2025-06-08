@@ -44,11 +44,21 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
     }`}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 lg:h-20">
-          {/* Enhanced Logo/Brand */}
+          {/* Enhanced Logo/Brand with Image */}
           <div className="flex-shrink-0 group">
-            <span className="text-2xl lg:text-3xl font-black bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 bg-clip-text text-transparent hover:from-blue-300 hover:via-purple-300 hover:to-emerald-300 transition-all duration-500 cursor-pointer hover:scale-105">
-              Tejas Kale
-            </span>
+            <div className="flex items-center space-x-3 cursor-pointer hover:scale-105 transition-all duration-500">
+              <div className="relative">
+                <img 
+                  src="/img/profile.png" 
+                  alt="Tejas Kale" 
+                  className="w-10 h-10 lg:w-12 lg:h-12 rounded-full border-2 border-gradient-to-r from-blue-400 to-purple-400 shadow-lg shadow-blue-400/20 transition-all duration-300 group-hover:shadow-blue-400/40"
+                />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/20 to-purple-400/20 animate-pulse" />
+              </div>
+              <span className="text-xl lg:text-2xl font-black bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 bg-clip-text text-transparent hover:from-blue-300 hover:via-purple-300 hover:to-emerald-300 transition-all duration-500">
+                Tejas Kale
+              </span>
+            </div>
           </div>
 
           {/* Enhanced Desktop Navigation */}
