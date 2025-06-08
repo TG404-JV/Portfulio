@@ -49,7 +49,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
             <div className="flex items-center space-x-3 cursor-pointer hover:scale-105 transition-all duration-500">
               <div className="relative">
                 <img 
-                  src="/img/profile.png" 
+                  src="/img/ic_android" 
                   alt="Tejas Kale" 
                   className="w-10 h-10 lg:w-12 lg:h-12 rounded-full border-2 border-gradient-to-r from-blue-400 to-purple-400 shadow-lg shadow-blue-400/20 transition-all duration-300 group-hover:shadow-blue-400/40"
                 />
