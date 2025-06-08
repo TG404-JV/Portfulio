@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700;800;900&display=swap');
 
 @layer base {
   :root {
@@ -26,7 +26,7 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 210 100% 56%;
-    --radius: 0.5rem;
+    --radius: 0.75rem;
     --gold: 45 100% 50%;
   }
 
@@ -36,11 +36,12 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
   }
 }
 
@@ -57,34 +58,42 @@
   }
 
   .bg-gradient-dark {
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    background: linear-gradient(135deg, #0f0f23, #1a1a2e, #16213e);
   }
 
   .card-3d {
     transform-style: preserve-3d;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
 
   .card-3d:hover {
-    transform: rotateX(5deg) rotateY(5deg) scale(1.05);
+    transform: rotateX(2deg) rotateY(5deg) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   }
 
   .floating {
-    animation: float 3s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
   }
 
   .pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite alternate;
+    animation: pulse-glow 3s ease-in-out infinite alternate;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-15px); }
   }
 
   @keyframes pulse-glow {
-    from { box-shadow: 0 0 20px rgba(30, 136, 229, 0.4); }
-    to { box-shadow: 0 0 30px rgba(30, 136, 229, 0.8); }
+    from { box-shadow: 0 0 30px rgba(102, 126, 234, 0.4); }
+    to { box-shadow: 0 0 50px rgba(102, 126, 234, 0.8); }
   }
 
   @keyframes rotate-3d {
@@ -96,25 +105,36 @@
   }
 
   .rotate-3d {
-    animation: rotate-3d 8s ease-in-out infinite;
+    animation: rotate-3d 10s ease-in-out infinite;
   }
 
   @keyframes orbit {
     0% { 
-      transform: translate(-50%, -50%) rotate(0deg) translateX(120px) rotate(0deg); 
+      transform: translate(-50%, -50%) rotate(0deg) translateX(140px) rotate(0deg); 
     }
     100% { 
-      transform: translate(-50%, -50%) rotate(360deg) translateX(120px) rotate(-360deg); 
+      transform: translate(-50%, -50%) rotate(360deg) translateX(140px) rotate(-360deg); 
     }
   }
 
   @keyframes orbit-skill {
-    0% { transform: rotateZ(0deg) translateX(120px) rotateZ(0deg); }
-    100% { transform: rotateZ(360deg) translateX(120px) rotateZ(-360deg); }
+    0% { transform: rotateZ(0deg) translateX(140px) rotateZ(0deg); }
+    100% { transform: rotateZ(360deg) translateX(140px) rotateZ(-360deg); }
   }
 
   .orbit-skill {
-    animation: orbit-skill 12s linear infinite;
+    animation: orbit-skill 15s linear infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
   }
 
   .perspective-1000 {
@@ -126,7 +146,7 @@
   }
 
   .flip-card {
-    transition: transform 0.6s;
+    transition: transform 0.8s;
     transform-style: preserve-3d;
   }
 
@@ -144,5 +164,29 @@
 
   .flip-card-back {
     transform: rotateY(180deg);
+  }
+
+  /* Enhanced scroll bar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+  }
+
+  /* Enhanced selection */
+  ::selection {
+    background: rgba(59, 130, 246, 0.3);
+    color: white;
   }
 }
