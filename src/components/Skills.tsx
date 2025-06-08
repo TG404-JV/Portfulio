@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -125,7 +126,7 @@ const Skills = () => {
             </p>
           </div>
 
-          {/* Premium animated skills orbit */}
+          {/* Enhanced rotating skills orbit with your photo */}
           <div className="relative mb-24 flex justify-center">
             <div className="relative w-96 h-96">
               {/* Orbital rings */}
@@ -137,7 +138,7 @@ const Skills = () => {
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-full flex items-center justify-center overflow-hidden border-4 border-white/20 shadow-2xl backdrop-blur-xl">
                 <div className="w-36 h-36 rounded-full overflow-hidden border-2 border-white/30">
                   <img 
-                      src="/img/profile.png" 
+                    src="/img/profile.png" 
                     alt="Tejas Kale" 
                     className="w-full h-full object-cover"
                   />
@@ -146,23 +147,29 @@ const Skills = () => {
               </div>
               
               {/* Enhanced rotating skill badges */}
-              {rotatingSkills.map((skill, index) => (
-                <div
-                  key={index}
-                  className={`absolute w-20 h-20 bg-gradient-to-br ${skill.color} rounded-2xl flex items-center justify-center text-white text-xs font-bold border border-white/20 ${skill.shadow} shadow-2xl backdrop-blur-sm hover:scale-110 transition-all duration-300`}
-                  style={{
-                    top: '50%',
-                    left: '50%',
-                    transformOrigin: '0 0',
-                    animation: `orbit 20s linear infinite`,
-                    animationDelay: `${index * -2.5}s`,
-                    transform: `translate(-50%, -50%) rotate(${index * 45}deg) translateX(140px) rotate(${-index * 45}deg)`
-                  }}
-                >
-                  <span className="text-center leading-tight">{skill.name}</span>
-                  <div className="absolute inset-0 bg-white/10 rounded-2xl opacity-0 hover:opacity-100 transition-opacity"></div>
-                </div>
-              ))}
+              {rotatingSkills.map((skill, index) => {
+                const angle = (index * 45) * (Math.PI / 180);
+                const radius = 140;
+                const x = Math.cos(angle) * radius;
+                const y = Math.sin(angle) * radius;
+                
+                return (
+                  <div
+                    key={index}
+                    className={`absolute w-20 h-20 bg-gradient-to-br ${skill.color} rounded-2xl flex items-center justify-center text-white text-xs font-bold border border-white/20 ${skill.shadow} shadow-2xl backdrop-blur-sm hover:scale-110 transition-all duration-300 animate-skill-orbit`}
+                    style={{
+                      left: '50%',
+                      top: '50%',
+                      transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
+                      animationDelay: `${index * -2.5}s`,
+                      animationDuration: '20s'
+                    }}
+                  >
+                    <span className="text-center leading-tight">{skill.name}</span>
+                    <div className="absolute inset-0 bg-white/10 rounded-2xl opacity-0 hover:opacity-100 transition-opacity"></div>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -231,16 +238,16 @@ const Skills = () => {
                 {/* Header section */}
                 <div className="text-center mb-12">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl mb-6 border border-white/20">
-                    <span className="text-2xl">📊</span>
+                    <span className="text-2xl">🚀</span>
                   </div>
                   <h3 className="text-4xl font-black mb-4">
-                    <span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
-                      Professional Journey
+                    <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                      Ready to Build Amazing Things
                     </span>
                   </h3>
                   <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full mb-4"></div>
-                  <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                    Metrics that reflect my commitment to continuous growth and technical excellence
+                  <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Let's collaborate and create something extraordinary together
                   </p>
                 </div>
                 
@@ -294,10 +301,10 @@ const Skills = () => {
                 {/* Professional statement */}
                 <div className="text-center relative">
                   <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                    <p className="text-xl font-semibold text-gray-200 mb-4 leading-relaxed">
+                    <p className="text-xl font-semibold text-white mb-4 leading-relaxed">
                       Driven by curiosity and powered by innovation
                     </p>
-                    <p className="text-gray-400 text-base max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-gray-300 text-base max-w-3xl mx-auto leading-relaxed">
                       Every line of code is an opportunity to learn something new. I combine technical expertise with creative problem-solving to deliver solutions that make a difference.
                     </p>
                     <div className="flex justify-center mt-6">
@@ -316,13 +323,17 @@ const Skills = () => {
       </div>
 
       <style>{`
-        @keyframes orbit {
+        @keyframes skill-orbit {
           from {
             transform: translate(-50%, -50%) rotate(0deg) translateX(140px) rotate(0deg);
           }
           to {
             transform: translate(-50%, -50%) rotate(360deg) translateX(140px) rotate(-360deg);
           }
+        }
+        
+        .animate-skill-orbit {
+          animation: skill-orbit 20s linear infinite;
         }
       `}</style>
     </div>
