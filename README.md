@@ -1,112 +1,105 @@
-# Project Name
+# Tejas Kale - Portfolio Website
 
-A modern web application built with React, TypeScript, and Tailwind CSS.
+A modern, responsive portfolio website showcasing my work as an Android Developer and showcasing my projects, skills, and professional experience.
 
-## 🚀 Features
-
-- Modern React application with TypeScript
-- Responsive design with Tailwind CSS
-- Component library with shadcn/ui
-- Fast development with Vite
-- Clean and maintainable code structure
+## 🚀 Live Demo
+**URL**: [View Portfolio](https://tejasportfolio-git-main-tejas-kales-projects.vercel.app/)
 
 ## 🛠️ Technologies Used
+This project is built with modern web technologies:
 
-- **Frontend Framework**: React 18
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **Build Tool**: Vite
-- **Package Manager**: npm
+- **React** - Frontend framework
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and development server
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - Modern UI components
+- **Vercel** - Deployment platform
 
-## 📋 Prerequisites
-
-Before you begin, ensure you have the following installed:
-- [Node.js](https://nodejs.org/) (version 16 or higher)
-- [npm](https://www.npmjs.com/) (comes with Node.js)
-
-You can install Node.js using [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) for better version management.
+## 📁 Project Structure
+```
+portfolio/
+├── src/
+│   ├── components/     # Reusable React components
+│   ├── pages/         # Main page components
+│   ├── styles/        # CSS and styling files
+│   └── assets/        # Images and static files
+├── public/            # Public assets
+└── package.json       # Dependencies and scripts
+```
 
 ## 🚀 Getting Started
 
-Follow these steps to get the project running locally:
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn package manager
 
-### 1. Clone the repository
-```bash
-git clone <YOUR_GIT_URL>
-cd <YOUR_PROJECT_NAME>
-```
+### Installation
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/TG404-JV/portfolio.git
+   cd portfolio
+   ```
 
-### 2. Install dependencies
-```bash
-npm install
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-### 3. Start the development server
-```bash
-npm run dev
-```
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-The application will be available at `http://localhost:5173`
+4. **Open your browser**
+   Navigate to `http://localhost:5173` to view the website
 
-## 📦 Available Scripts
+### Available Scripts
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-- `npm run dev` - Start development server with hot reload
-- `npm run build` - Build the project for production
-- `npm run preview` - Preview the production build locally
-- `npm run lint` - Run ESLint to check code quality
+## 🎨 Features
+- **Responsive Design** - Works perfectly on all devices
+- **Modern UI/UX** - Clean and professional interface
+- **Fast Loading** - Optimized performance with Vite
+- **Type Safety** - Built with TypeScript
+- **Component-Based** - Modular React architecture
+- **SEO Friendly** - Optimized for search engines
 
-## 📁 Project Structure
-
-```
-src/
-├── components/     # Reusable UI components
-├── pages/         # Page components
-├── hooks/         # Custom React hooks
-├── utils/         # Utility functions
-├── types/         # TypeScript type definitions
-└── styles/        # Global styles and Tailwind config
-```
+## 📱 Sections
+- **About** - Professional summary and introduction
+- **Skills** - Technical expertise and tools
+- **Projects** - Showcase of development work
+- **Experience** - Professional background
+- **Contact** - Ways to get in touch
 
 ## 🚀 Deployment
+This project is deployed on Vercel for optimal performance and reliability.
 
-### Using Vercel (Recommended)
-1. Push your code to GitHub
-2. Connect your repository to [Vercel](https://vercel.com/)
-3. Deploy with one click
+To deploy your own version:
+1. Fork this repository
+2. Connect your GitHub account to Vercel
+3. Import the project and deploy
 
-### Using Netlify
-1. Build the project: `npm run build`
-2. Deploy the `dist` folder to [Netlify](https://netlify.com/)
-
-### Using GitHub Pages
-1. Install gh-pages: `npm install --save-dev gh-pages`
-2. Add deployment script to package.json
-3. Run: `npm run deploy`
+## 📝 Customization
+To customize this portfolio for your own use:
+1. Update personal information in the components
+2. Replace project data with your own work
+3. Modify the color scheme in Tailwind config
+4. Add your own images to the assets folder
 
 ## 🤝 Contributing
+This is a personal portfolio project, but suggestions and feedback are welcome!
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/new-feature`
-3. Commit your changes: `git commit -am 'Add new feature'`
-4. Push to the branch: `git push origin feature/new-feature`
-5. Submit a pull request
+## 📧 Contact
+- **Email**: cse.tejas@gmail.com
+- **LinkedIn**: [Tejas Kale](https://www.linkedin.com/in/tejas-kale-65419a24b)
+- **GitHub**: [TG404-JV](https://github.com/TG404-JV)
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Created By
-
-**Tejas Kale**
-
-- GitHub: [@tejaskale](https://github.com/tejaskale)
-- LinkedIn: [Tejas Kale](https://linkedin.com/in/tejaskale)
-
-## 📞 Support
-
-If you have any questions or need help, please open an issue or contact the maintainer.
+## 📄 License
+This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-⭐ If you found this project helpful, please give it a star!
+**Built with ❤️ by Tejas Kale**
