@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Users, Award, Shield, TrendingUp, Target, CheckCircle } from 'lucide-react';
 
 const Leadership = () => {
   return (
@@ -12,17 +13,16 @@ const Leadership = () => {
             Leadership <span className="text-gradient">Excellence</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Demonstrating leadership and organizational skills beyond technical development through academic and community responsibilities.
+            Demonstrating leadership and organizational skills through both technical project management and academic administration responsibilities.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Leadership Role Card */}
           <Card className="group relative overflow-hidden border-0 bg-gray-800/50 p-8 card-3d hover:shadow-2xl transition-all duration-300">
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-500 to-orange-600 opacity-10 group-hover:opacity-20 transition-opacity" />
             
             <div className="relative text-center">
-              {/* 3D Badge Animation */}
               <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center text-3xl font-bold text-white pulse-glow rotate-3d">
                 🏆
               </div>
@@ -32,96 +32,149 @@ const Leadership = () => {
               </Badge>
 
               <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-gradient transition-colors">
-                MHT-CET Exam Center Manager
+                Center Manager, MHT-CET Examination
               </h3>
               
               <h4 className="text-xl text-yellow-400 font-semibold mb-6">
-                MGM University
+                MGM University, Chh. Sambhajinagar
               </h4>
 
               <p className="text-gray-300 leading-relaxed mb-8">
-                Leading comprehensive exam operations for one of Maharashtra's most important entrance examinations, 
-                ensuring compliance with government regulations and maintaining the highest standards of academic integrity.
+                Successfully managed examination operations for one of Maharashtra's most important entrance examinations, 
+                ensuring compliance with state regulations and maintaining the highest standards of academic integrity.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-yellow-400">500+</div>
-                  <div className="text-sm text-gray-400">Students Managed</div>
+                  <div className="text-sm text-gray-400">Candidates Managed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-orange-400">100%</div>
-                  <div className="text-sm text-gray-400">Compliance Rate</div>
+                  <div className="text-2xl font-bold text-orange-400">50+</div>
+                  <div className="text-sm text-gray-400">Staff Members</div>
                 </div>
               </div>
             </div>
           </Card>
 
-          {/* Responsibilities and Skills */}
-          <div className="space-y-6">
-            <Card className="p-6 bg-gray-800/50 border-gray-700">
-              <h4 className="text-xl font-bold text-gradient mb-4">Key Responsibilities</h4>
-              <ul className="space-y-3">
-                {[
-                  "Managed exam operations and logistics coordination",
-                  "Ensured compliance with MHT-CET regulations",
-                  "Led staff training and performance management",
-                  "Coordinated with university administration",
-                  "Maintained examination security protocols",
-                  "Handled student inquiries and support"
-                ].map((responsibility, index) => (
-                  <li key={index} className="text-gray-300 flex items-start">
-                    <span className="text-yellow-400 mr-3 mt-1">▶</span>
-                    <span>{responsibility}</span>
-                  </li>
-                ))}
-              </ul>
-            </Card>
-
-            <Card className="p-6 bg-gray-800/50 border-gray-700">
-              <h4 className="text-xl font-bold text-gradient mb-4">Leadership Skills Developed</h4>
-              <div className="grid grid-cols-2 gap-3">
-                {[
-                  "Team Management",
-                  "Crisis Resolution", 
-                  "Strategic Planning",
-                  "Quality Assurance",
-                  "Communication",
-                  "Problem Solving"
-                ].map((skill, index) => (
-                  <Badge 
-                    key={index}
-                    variant="outline"
-                    className="border-orange-500/30 text-orange-300 bg-orange-500/10 p-2 text-center"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
+          {/* Technical Leadership */}
+          <Card className="p-6 bg-gray-800/50 border-gray-700">
+            <div className="flex items-center mb-6">
+              <Users className="w-6 h-6 text-blue-400 mr-3" />
+              <h4 className="text-xl font-bold text-gradient">Technical Leadership</h4>
+            </div>
+            <div className="space-y-4">
+              <div className="p-4 bg-gray-700/30 rounded-lg">
+                <h5 className="font-semibold text-white mb-2">Cross-functional Team Lead</h5>
+                <p className="text-gray-300 text-sm mb-2">Led Agile teams of 3-5 developers at TVM IT Solutions</p>
+                <div className="flex items-center text-green-400 text-sm">
+                  <CheckCircle className="w-4 h-4 mr-2" />
+                  100% on-time delivery record across 4 major releases
+                </div>
               </div>
-            </Card>
+              <div className="p-4 bg-gray-700/30 rounded-lg">
+                <h5 className="font-semibold text-white mb-2">Architecture Leadership</h5>
+                <p className="text-gray-300 text-sm mb-2">Architected scalable Android applications serving 100+ universities</p>
+                <div className="flex items-center text-blue-400 text-sm">
+                  <TrendingUp className="w-4 h-4 mr-2" />
+                  45% improvement in data processing efficiency
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
 
-            <Card className="p-6 bg-gray-800/50 border-gray-700">
-              <h4 className="text-xl font-bold text-gradient mb-4">Impact & Achievements</h4>
-              <div className="space-y-3">
+        <div className="grid lg:grid-cols-2 gap-8 mt-8">
+          {/* Key Responsibilities */}
+          <Card className="p-6 bg-gray-800/50 border-gray-700">
+            <div className="flex items-center mb-6">
+              <Target className="w-6 h-6 text-green-400 mr-3" />
+              <h4 className="text-xl font-bold text-gradient">Key Responsibilities</h4>
+            </div>
+            <ul className="space-y-3">
+              {[
+                "Successfully managed examination operations for 500+ candidates across 2 centers",
+                "Coordinated and supervised 50+ staff members during examination periods",
+                "Achieved 100% compliance with state examination protocols",
+                "Maintained zero security incidents throughout tenure",
+                "Implemented digital monitoring systems for operational efficiency",
+                "Coordinated with university administration and government officials"
+              ].map((responsibility, index) => (
+                <li key={index} className="text-gray-300 flex items-start">
+                  <span className="text-green-400 mr-3 mt-1">▶</span>
+                  <span className="text-sm">{responsibility}</span>
+                </li>
+              ))}
+            </ul>
+          </Card>
+
+          {/* Leadership Skills */}
+          <Card className="p-6 bg-gray-800/50 border-gray-700">
+            <div className="flex items-center mb-6">
+              <Award className="w-6 h-6 text-purple-400 mr-3" />
+              <h4 className="text-xl font-bold text-gradient">Leadership Skills Developed</h4>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                "Team Management",
+                "Crisis Resolution", 
+                "Strategic Planning",
+                "Quality Assurance",
+                "Stakeholder Communication",
+                "Process Optimization",
+                "Compliance Management",
+                "Performance Monitoring"
+              ].map((skill, index) => (
+                <Badge 
+                  key={index}
+                  variant="outline"
+                  className="border-purple-500/30 text-purple-300 bg-purple-500/10 p-2 text-center text-sm"
+                >
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </Card>
+        </div>
+
+        {/* Impact & Achievements */}
+        <div className="mt-8">
+          <Card className="p-8 bg-gray-800/50 border-gray-700">
+            <div className="flex items-center mb-6">
+              <Shield className="w-6 h-6 text-blue-400 mr-3" />
+              <h4 className="text-2xl font-bold text-gradient">Impact & Achievements</h4>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-green-400 rounded-full mr-3"></div>
-                  <span className="text-gray-300">Zero security incidents during tenure</span>
+                  <span className="text-gray-300">Zero security incidents during examination management</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-blue-400 rounded-full mr-3"></div>
-                  <span className="text-gray-300">Streamlined exam processes for efficiency</span>
+                  <span className="text-gray-300">25% improvement in operational efficiency through digital systems</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-purple-400 rounded-full mr-3"></div>
-                  <span className="text-gray-300">Maintained 100% regulatory compliance</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-yellow-400 rounded-full mr-3"></div>
-                  <span className="text-gray-300">Positive feedback from university administration</span>
+                  <span className="text-gray-300">100% regulatory compliance with state examination protocols</span>
                 </div>
               </div>
-            </Card>
-          </div>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <div className="w-3 h-3 bg-yellow-400 rounded-full mr-3"></div>
+                  <span className="text-gray-300">Successful coordination across 2 examination centers</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-3 h-3 bg-orange-400 rounded-full mr-3"></div>
+                  <span className="text-gray-300">Positive feedback from university administration</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-3 h-3 bg-teal-400 rounded-full mr-3"></div>
+                  <span className="text-gray-300">Seamless examination experience for all candidates</span>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>
 
         {/* Leadership Philosophy */}
@@ -129,13 +182,14 @@ const Leadership = () => {
           <Card className="p-8 bg-gray-800/50 border-gray-700 text-center">
             <h3 className="text-2xl font-bold mb-4 text-gradient">Leadership Philosophy</h3>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              "Leadership is not about being in charge. It's about taking care of those in your charge. 
-              Whether managing exam operations or leading development teams, I believe in fostering environments 
-              where everyone can succeed while maintaining the highest standards of integrity and excellence."
+              "Leadership is about creating an environment where everyone can perform at their best. 
+              Whether managing examination operations or leading development teams, I believe in combining 
+              strategic thinking with hands-on problem-solving to deliver exceptional results while 
+              maintaining the highest standards of integrity and excellence."
             </p>
             <div className="mt-6 flex justify-center">
               <Badge variant="secondary" className="bg-gradient-primary text-white px-6 py-2 text-lg">
-                Leading by Example
+                Leading Through Innovation
               </Badge>
             </div>
           </Card>

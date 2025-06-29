@@ -1,8 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Github, Globe, ExternalLink, Star, Code, Zap, Brain, Smartphone, Database, Sparkles, ArrowRight, Eye } from 'lucide-react';
+import { Github, Globe, ExternalLink, Star, Code, Zap, Brain, Smartphone, Database, Sparkles, ArrowRight, Eye, TrendingUp, Users } from 'lucide-react';
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -19,52 +20,56 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "DoctorCubes Android App",
-      description: "Led development of a comprehensive platform connecting MBBS students with global admissions. Features include real-time chat, application tracking, and university matching algorithms.",
-      technologies: ["Java", "XML", "Firebase", "REST APIs", "Android SDK"],
+      title: "DoctorCubes - Medical Education Platform",
+      description: "Led development of scalable medical education app serving 100+ universities. Implemented advanced search algorithms, interactive learning modules, and progress tracking systems with offline content caching and collaborative learning tools.",
+      technologies: ["Kotlin", "Java", "MVVM", "Firebase", "RESTful APIs", "Android SDK"],
       gradient: "from-blue-500 via-blue-600 to-purple-600",
       accentColor: "blue",
       playStoreUrl: "https://play.google.com/store/apps/details?id=com.tvm.doctorcube",
       status: "Live on Play Store",
       icon: <Smartphone className="w-6 h-6" />,
-      metrics: { downloads: "1K+", rating: "4.5" },
-      category: "Mobile App"
+      metrics: { universities: "100+", efficiency: "45%" },
+      category: "Medical Education",
+      year: "2025"
     },
     {
-      title: "AI Quiz App",
-      description: "Revolutionary quiz platform powered by ChatGPT and Gemini APIs. Features advanced prompt engineering, adaptive difficulty, and personalized learning paths for enhanced educational experience.",
-      technologies: ["Android", "ChatGPT API", "Gemini API", "Prompt Engineering", "Java"],
+      title: "AI-Powered Quiz Application",
+      description: "Developing AI-powered Quiz Application integrating ChatGPT and Gemini APIs with comprehensive testing framework. Features 95% content accuracy with Material Design 3 components and robust error handling.",
+      technologies: ["Android", "ChatGPT API", "Gemini API", "Material Design 3", "MVVM"],
       gradient: "from-green-500 via-teal-500 to-emerald-600",
       accentColor: "green",
       githubUrl: "https://github.com/TG404-JV",
-      status: "Open Source",
+      status: "In Development",
       icon: <Brain className="w-6 h-6" />,
-      metrics: { stars: "25+", forks: "8" },
-      category: "AI Integration"
+      metrics: { accuracy: "95%", cost_reduction: "25%" },
+      category: "AI Integration",
+      year: "2025"
     },
     {
-      title: "Car Rental Website",
-      description: "Full-stack rental platform with advanced booking system, payment integration, real-time availability tracking, and comprehensive admin dashboard for fleet management.",
-      technologies: ["HTML5", "CSS3", "PHP", "MySQL", "JavaScript"],
+      title: "AI-Powered Conversational Chatbot",
+      description: "Developed intelligent Android chatbot leveraging Gemini API with advanced NLP capabilities. Features real-time conversation management, context awareness, voice-to-text integration, and adaptive learning algorithms.",
+      technologies: ["Android", "Gemini API", "NLP", "Voice-to-Text", "Machine Learning"],
+      gradient: "from-purple-500 via-violet-500 to-pink-600",
+      accentColor: "purple",
+      githubUrl: "https://github.com/TG404-JV",
+      status: "Completed",
+      icon: <Zap className="w-6 h-6" />,
+      metrics: { response_time: "< 2s", accuracy: "90%" },
+      category: "AI Chatbot",
+      year: "2024"
+    },
+    {
+      title: "Agricultural Finance Manager",
+      description: "Created comprehensive expense tracking solution for farmers featuring Firebase real-time synchronization, offline-first architecture with SQLite, and intuitive dashboard analytics with multi-language support.",
+      technologies: ["Android", "Firebase", "SQLite", "Analytics", "Multi-language"],
       gradient: "from-orange-500 via-red-500 to-pink-600",
       accentColor: "orange",
       githubUrl: "https://github.com/TG404-JV",
       status: "Completed",
-      icon: <Globe className="w-6 h-6" />,
-      metrics: { pages: "15+", users: "500+" },
-      category: "Web Development"
-    },
-    {
-      title: "AI-Powered Chatbot",
-      description: "Intelligent conversational AI with advanced NLP capabilities, context awareness, and machine learning-driven responses. Features multi-language support and sentiment analysis.",
-      technologies: ["Android", "TensorFlow", "NLP", "Machine Learning", "Java"],
-      gradient: "from-purple-500 via-violet-500 to-pink-600",
-      accentColor: "purple",
-      githubUrl: "https://github.com/TG404-JV",
-      status: "In Development",
-      icon: <Zap className="w-6 h-6" />,
-      metrics: { accuracy: "94%", responses: "1M+" },
-      category: "Machine Learning"
+      icon: <TrendingUp className="w-6 h-6" />,
+      metrics: { transparency: "40%", users: "500+" },
+      category: "FinTech",
+      year: "2024"
     }
   ];
 
@@ -86,7 +91,6 @@ const Projects = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="absolute top-3/4 left-3/4 w-72 h-72 bg-green-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
         
-        {/* Code-like floating elements */}
         {Array.from({ length: 15 }).map((_, i) => (
           <div
             key={i}
@@ -103,7 +107,6 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* Mouse Follower */}
       <div 
         className="fixed w-8 h-8 bg-gradient-to-r from-blue-400/30 to-purple-500/30 rounded-full pointer-events-none blur-sm transition-all duration-300 ease-out z-50"
         style={{
@@ -118,12 +121,12 @@ const Projects = () => {
           <div className="text-center mb-20 relative">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3 mb-8">
               <Code className="w-5 h-5 text-blue-400" />
-              <span className="text-sm text-blue-300 font-semibold">Portfolio Showcase</span>
+              <span className="text-sm text-blue-300 font-semibold">Featured Projects</span>
               <Sparkles className="w-4 h-4 text-purple-400" />
             </div>
             
             <h2 className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-300 bg-clip-text text-transparent leading-tight">
-              Featured <span className="relative">
+              My <span className="relative">
                 Projects
                 <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg blur opacity-20 animate-pulse" />
               </span>
@@ -146,11 +149,9 @@ const Projects = () => {
                   onMouseEnter={() => setHoveredProject(index)}
                   onMouseLeave={() => setHoveredProject(null)}
                 >
-                  {/* Animated Border */}
                   <div className={`absolute -inset-0.5 bg-gradient-to-r ${project.gradient} rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000`} />
                   
                   <Card className="relative overflow-hidden border-0 bg-gray-900/80 backdrop-blur-xl rounded-3xl h-full transition-all duration-500 group-hover:transform group-hover:scale-[1.02]">
-                    {/* Gradient Overlay */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-500`} />
                     
                     <div className="relative p-8 h-full flex flex-col">
@@ -164,7 +165,12 @@ const Projects = () => {
                             <h3 className="text-2xl font-bold text-white group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                               {project.title}
                             </h3>
-                            <p className="text-sm text-gray-400 font-medium">{project.category}</p>
+                            <div className="flex items-center gap-2 mt-1">
+                              <p className="text-sm text-gray-400 font-medium">{project.category}</p>
+                              <Badge variant="outline" className="text-xs border-gray-600 text-gray-500">
+                                {project.year}
+                              </Badge>
+                            </div>
                           </div>
                         </div>
                         
@@ -188,7 +194,7 @@ const Projects = () => {
                       </div>
 
                       {/* Description */}
-                      <p className="text-gray-300 mb-8 flex-grow leading-relaxed text-lg">
+                      <p className="text-gray-300 mb-8 flex-grow leading-relaxed text-base">
                         {project.description}
                       </p>
 
@@ -236,7 +242,6 @@ const Projects = () => {
                         )}
                       </div>
 
-                      {/* Hover Effect Indicator */}
                       {hoveredProject === index && (
                         <div className="absolute top-4 right-4 text-gray-400 animate-bounce">
                           <Eye className="w-5 h-5" />
