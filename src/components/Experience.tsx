@@ -7,57 +7,23 @@ import { Calendar, MapPin, TrendingUp, Users, Code, Zap } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: "Android Developer (Full-Time)",
+      title: "Android Developer",
       company: "TVM IT Solutions",
       location: "Chh. Sambhajinagar, India",
-      period: "February 2025 – Present",
+      period: "Feb 2025 – Present",
       description: "Leading development of scalable Android applications with focus on performance optimization and AI integration.",
       achievements: [
-        "Architected and developed DoctorCubes Android App serving 100+ universities using Kotlin/Java, achieving 45% improvement in data processing efficiency",
-        "Designed and implemented secure RESTful APIs with comprehensive admin panel, resulting in 30% overall performance enhancement",
-        "Led cross-functional Agile teams of 3-5 developers, maintaining 100% on-time delivery record across 4 major product releases",
-        "Integrated advanced AI features using sophisticated prompt engineering techniques, boosting user personalization metrics by 35%",
-        "Implemented robust MVVM architecture with Jetpack libraries ensuring 85%+ code coverage and maintainable codebase"
+        "Architected and developed DoctorCubes, a comprehensive medical education app serving 100+ universities using Kotlin and Java, improving data processing efficiency by 45%",
+        "Designed and implemented secure RESTful APIs with integrated admin panel, resulting in 30% performance improvement",
+        "Led cross-functional Agile teams of 3-5 developers, achieving 100% on-time delivery across 4 major product releases",
+        "Integrated advanced AI features using custom prompt engineering techniques, increasing app personalization by 35%",
+        "Implemented MVVM architecture with Jetpack libraries, maintaining 85%+ code coverage and ensuring scalable codebase"
       ],
       technologies: ["Kotlin", "Java", "MVVM", "Firebase", "RESTful APIs", "AI Integration"],
-      gradient: "from-blue-500 to-purple-600",
+      gradient: "from-blue-500 to-purple-600", 
       status: "Current",
       icon: <Code className="w-6 h-6" />
     },
-    {
-      title: "Android Developer (Part-Time)",
-      company: "AAYAAM AI",
-      location: "Remote",
-      period: "April 2025 – Present", 
-      description: "Developing AI-powered applications with focus on ChatGPT and Gemini API integration for enhanced user experience.",
-      achievements: [
-        "Developing AI-powered Quiz Application integrating ChatGPT and Gemini APIs with comprehensive testing framework covering multiple user scenarios",
-        "Optimized AI API prompts achieving 95% content accuracy while reducing operational costs by 25% through efficient resource management",
-        "Built scalable MVVM architecture supporting API levels 21-34 with Material Design 3 components and 85% code coverage",
-        "Specialized in seamless AI-Android integration, implementing robust error handling and offline capabilities for enhanced user experience"
-      ],
-      technologies: ["Android", "ChatGPT API", "Gemini API", "Material Design 3", "MVVM"],
-      gradient: "from-green-500 to-teal-600",
-      status: "Current",
-      icon: <Zap className="w-6 h-6" />
-    },
-    {
-      title: "Android Developer Intern",
-      company: "Staff Inn IT Solutions",
-      location: "Chh. Sambhajinagar, India",
-      period: "March 2024 – August 2024",
-      description: "Developed comprehensive CRM applications with advanced data visualization and reporting features.",
-      achievements: [
-        "Built comprehensive CRM system from scratch with advanced analytics",
-        "Implemented data visualization with charts and graphs for better insights",
-        "Created responsive UI following Material Design principles",
-        "Delivered project 2 weeks ahead of schedule with excellent performance metrics"
-      ],
-      technologies: ["Android", "Java", "SQLite", "Material Design", "CRM Systems"],
-      gradient: "from-orange-500 to-red-600",
-      status: "Completed",
-      icon: <TrendingUp className="w-6 h-6" />
-    }
   ];
 
   return (
