@@ -40,7 +40,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-dark text-white">
+    <div className="min-h-screen bg-background text-foreground">
       <Navigation activeSection={activeSection} />
       
       <section id="home">
@@ -51,7 +51,7 @@ const Index = () => {
         <About />
       </section>
 
-      <section id="projects" className="py-20 bg-gray-900/50">
+      <section id="projects" className="py-20 bg-muted/30">
         <Projects />
       </section>
 
@@ -59,7 +59,7 @@ const Index = () => {
         <Skills />
       </section>
 
-      <section id="experience" className="py-20 bg-gray-900/50">
+      <section id="experience" className="py-20 bg-muted/30">
         <Experience />
       </section>
 
@@ -67,20 +67,20 @@ const Index = () => {
         <Leadership />
       </section>
 
-      <section id="contact" className="py-20 bg-gray-900/50">
+      <section id="contact" className="py-20 bg-muted/30">
         <Contact />
       </section>
 
-      <footer className="bg-gray-900 py-8 text-center text-gray-400">
+      <footer className="bg-card border-t py-8 text-center text-muted-foreground">
         <div className="container mx-auto px-4">
           <p>&copy; 2025 Tejas Kale. Crafted with passion and code.</p>
           <div className="flex justify-center space-x-6 mt-4">
             <a href="https://github.com/TG404-JV" target="_blank" rel="noopener noreferrer" 
-               className="hover:text-blue-400 transition-colors">
+               className="hover:text-foreground transition-colors">
               <Github size={20} />
             </a>
             <a href="https://www.linkedin.com/in/tejas-kale-65419a24b" target="_blank" rel="noopener noreferrer"
-               className="hover:text-blue-400 transition-colors">
+               className="hover:text-foreground transition-colors">
               <Linkedin size={20} />
             </a>
           </div>
